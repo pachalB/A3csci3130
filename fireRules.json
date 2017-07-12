@@ -3,14 +3,21 @@
     ".read": "true",
     ".write": "true",
     "contacts": {
-            "$contact": {
-                "name": {
-                    ".validate": "newData.isString() && newData.val().length < 50"
-                },
-                "email": {
-                    ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
-                }
-            }
+        "name": {
+          ".validate": "newData.isString() && newData.val().length < 49 && newData.val().length > 1"
+        },
+        "businessNum": {
+          ".validate": "newData.isString() && newData.val().matches(/[0-9]*$/) && newData.val().length == 9"
+        },
+        "primaryBusiness": {
+          ".validate": "newData.isString() && newData.val().matches(/(Fisher|Distributor|Processor|Fish Monger)$/)"
+        },
+        "province": {
+          ".validate": "newData.isString() && (newData.val().matches(/^(N[BLSTU]|[AMN]B|[BQ]C|ON|PE|SK)$/) || newData.val().length == 0)"
+        },
+        "address": {
+          ".validate": "newData.isString() && newData.val().length < 50"
         }
+    }
   }
 }

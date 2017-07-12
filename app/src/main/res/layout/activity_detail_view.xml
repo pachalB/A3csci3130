@@ -17,14 +17,47 @@
         android:layout_marginStart="8dp" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/businessNum"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
-        android:hint="e-mail"
+        android:hint="Business Number"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/name"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <EditText
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/primaryBusiness"
+        android:hint = "Primary Business"
+        app:layout_constraintTop_toBottomOf="@+id/businessNum"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" />
+
+    <EditText
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:hint = "Address"
+        app:layout_constraintTop_toBottomOf="@+id/primaryBusiness"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" />
+
+    <EditText
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/province"
+        android:hint = "Province/Territory (eg. 'NS')"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp" />
 
     <Button
@@ -33,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Update Data"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/province"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="8dp"
@@ -45,7 +78,7 @@
         android:layout_height="wrap_content"
         android:text="Erase Contact"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/province"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginEnd="8dp"

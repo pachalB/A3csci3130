@@ -52,19 +52,24 @@ public class MainActivity extends Activity {
         });
     }
 
+    /**
+     * go to create contact activity
+     * @param v
+     **/
     public void createContactButton(View v)
     {
         Intent intent=new Intent(this, CreateContactAcitivity.class);
         startActivity(intent);
     }
 
+    /**
+     * go to detailed view activity
+     * @param person
+     **/
     private void showDetailView(Contact person)
     {
         Intent intent = new Intent(this, DetailViewActivity.class);
         intent.putExtra("Contact", person);
         startActivity(intent);
     }
-
-
-
 }
